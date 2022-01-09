@@ -1,8 +1,8 @@
 # reddit-covid-news
-This script searches the 'hot' posts on r/worldnews and returns the titles and links of all posts regarding the COVID-19 pandemic.
+A Python script that searches the top 100 "hot" posts on r/worldnews and returns the titles and links of all posts regarding the COVID-19 pandemic.
 
 # Instructions for authentication
-1) Create a Reddit accountm then visit https://www.reddit.com/prefs/apps/. Then click "create an app".
+1) Create a Reddit account then visit https://www.reddit.com/prefs/apps/. Then click "create an app".
 2) Type a SPECIFIC name ex)myredditcovidnews. Then, check the "script" box. For redirect uri, use "http://localhost:8080" (no quotes). You should now have 
    an authorized app named what ever you named it. Use this for part 4.
 4) In reddit.py line 6-8, paste your client_id (the sequence of letters, numbers underneath "personal use script" and above the secret ID).
