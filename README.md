@@ -9,4 +9,6 @@ A Python script that searches the top 100 "hot" posts on r/worldnews and creates
    Paste in your client_secret (the sequence on letters and numbers after "secret").
    Paste in your user_agent (the title of your application).
 5) reddit.py should be set and authorized.
-6) Run graph.py after several runs of reddit.py to visualize the trend of the day of the year vs. frequency of COVID-19 related posts.
+# How to use
+1) Run reddit.py. This will produce history.csv and dates.csv. Open history.csv to view the titles and links of the COVID-19 related posts.
+2) Run graph.py after several days of running reddit.py to visualize the trend of the day of the year vs. frequency of COVID-19 related posts.
