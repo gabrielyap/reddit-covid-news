@@ -1,5 +1,5 @@
 # reddit-covid-news
-A Python script that searches the top 100 "hot" posts on r/worldnews and creates a .csv file with the titles and links of all posts regarding the COVID-19 pandemic. Utilized Reddit’s API and gathered relevant news on current events.
+A Python script that searches the top 100 "hot" posts on r/worldnews and creates a .csv file with the titles and links of all posts regarding the COVID-19 pandemic. Utilized Reddit’s API and gathered relevant news on current events. 
 
 # Instructions for authentication
 1) Create a Reddit account then visit https://www.reddit.com/prefs/apps/. Then click "create an app".
@@ -8,4 +8,5 @@ A Python script that searches the top 100 "hot" posts on r/worldnews and creates
 4) In reddit.py line 6-8, paste your client_id (the sequence of letters, numbers underneath "personal use script" and above the secret ID).
    Paste in your client_secret (the sequence on letters and numbers after "secret").
    Paste in your user_agent (the title of your application).
-5) The program should be set and authorized.
+5) reddit.py should be set and authorized.
+6) Run graph.py after several runs of reddit.py to visualize the trend of the day of the year vs. frequency of COVID-19 related posts.
