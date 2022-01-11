@@ -1,5 +1,5 @@
-# This script searches the top 100 'hot' posts on r/worldnews and returns the titles and links
-# of all posts regarding the COVID-19 pandemic. By Gabriel Yap.
+# This script searches the top 100 'hot' posts on r/worldnews and creates history.csv
+# which stores the title and links of all COVID-related posts. By Gabriel Yap.
 import praw
 import pandas as pd
 import datetime
@@ -9,6 +9,7 @@ reddit_read_only = praw.Reddit(client_id="",         # your client id
                                user_agent="")        # your user agent, important to make specific
 #
 subreddit = reddit_read_only.subreddit("worldnews")
+numCovidPosts = 0
 keywords = ['covid', 'covid-19', 'coronavirus', 'corona', 'vaccine', 'vaccination',
             'pandemic', 'quarantine', 'vaccinated', 'vaccin', 'lockdown', 'booster',
             'dose','cdc', 'omicron']
@@ -27,4 +28,9 @@ for post in subreddit.hot(limit=100):
             print(myTitle)
             print("https://www.reddit.com" + post.permalink)
             print()
+            numCovidPosts += 1
             break
+file.close()
+dateFile = open('dates.csv', 'a')
+dateFile.write(currTime.strftime('%j') + "," + str(numCovidPosts))
+dateFile.close()
