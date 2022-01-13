@@ -32,5 +32,5 @@ for post in subreddit.hot(limit=100):
             break
 file.close()
 dateFile = open('dates.csv', 'a')
-dateFile.write(currTime.strftime('%j') + "," + str(numCovidPosts))
+dateFile.write(currTime.strftime('%j') + "," + str(numCovidPosts) + '\n')
 dateFile.close()
